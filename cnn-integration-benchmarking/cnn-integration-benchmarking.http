@@ -1,0 +1,6 @@
+@cnn_integration_benchmarking_HostAddress = http://localhost:5234
+
+GET {{cnn_integration_benchmarking_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
