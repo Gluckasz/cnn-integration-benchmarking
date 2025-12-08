@@ -5,6 +5,10 @@ VisualStudioVersion = 18.3.11218.70
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CNNInferenceAPI", "CNNInferenceAPI\CNNInferenceAPI.csproj", "{427FC9DD-D2C0-4930-8194-5E0D5FE31766}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Integration.ML.NET", "Integration.ML.NET\Integration.ML.NET.csproj", "{5253D45A-8B11-4332-8C07-EF0CD9EE733F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Integration.Common", "Integration.Common\Integration.Common.csproj", "{CF0332DF-6362-40E9-AA8A-203F69A2FD92}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{427FC9DD-D2C0-4930-8194-5E0D5FE31766}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{427FC9DD-D2C0-4930-8194-5E0D5FE31766}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{427FC9DD-D2C0-4930-8194-5E0D5FE31766}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5253D45A-8B11-4332-8C07-EF0CD9EE733F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5253D45A-8B11-4332-8C07-EF0CD9EE733F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5253D45A-8B11-4332-8C07-EF0CD9EE733F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5253D45A-8B11-4332-8C07-EF0CD9EE733F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF0332DF-6362-40E9-AA8A-203F69A2FD92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF0332DF-6362-40E9-AA8A-203F69A2FD92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF0332DF-6362-40E9-AA8A-203F69A2FD92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF0332DF-6362-40E9-AA8A-203F69A2FD92}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

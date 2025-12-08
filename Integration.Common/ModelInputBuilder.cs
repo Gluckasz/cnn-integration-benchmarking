@@ -1,4 +1,4 @@
-namespace Integration.ML.NET
+namespace Integration.Common
 {
     public abstract class ModelInputBuilder<T>
     {

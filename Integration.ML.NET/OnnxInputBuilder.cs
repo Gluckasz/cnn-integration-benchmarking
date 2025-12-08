@@ -1,3 +1,5 @@
+using Integration.Common;
+
 namespace Integration.ML.NET
 {
     public class OnnxInputBuilder : ModelInputBuilder<OnnxInputImagePath>
