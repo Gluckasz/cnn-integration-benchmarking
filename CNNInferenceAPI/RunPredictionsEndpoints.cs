@@ -8,10 +8,10 @@ namespace CNNInferenceAPI
         {
             app.MapPost(
                 "/RunPredictions/MLNET",
-                (string[]? imagePaths, IPredictionServiceFactory factory, Constants constants) =>
+                (string[]? imagePaths, IPredictionServiceFactory factory) =>
                 {
                     var predictionService = factory.GetService("MLNET");
-                    var paths = imagePaths ?? [constants.DefaultImagesPath];
+                    var paths = imagePaths ?? [Constants.DefaultImagesPath];
                     var results = predictionService.Predict(paths);
                     return Results.Ok(results);
                 }

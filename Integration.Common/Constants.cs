@@ -1,7 +1,8 @@
 ﻿namespace Integration.Common
 {
-    public record Constants(
-        string OnnxModelPath = "..\\Assets\\resnet-50.onnx",
-        string DefaultImagesPath = "..\\Assets\\images"
-    );
+    public static class Constants
+    {
+        public static readonly string OnnxModelPath = "..\\Assets\\resnet-50.onnx";
+        public static readonly string DefaultImagesPath = "..\\Assets\\images";
+    }
 }

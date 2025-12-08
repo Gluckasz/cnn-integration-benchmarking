@@ -14,12 +14,14 @@ namespace CNNInferenceAPI
 
             builder.Services.AddOpenApi();
 
-            builder.Services.AddSingleton<Constants>();
             builder.Services.AddTransient<
                 ModelInputBuilder<OnnxInputImagePath>,
                 OnnxInputBuilder
             >();
-            builder.Services.AddKeyedTransient<IImagePredictionService, ResNetImagePredictionService>("MLNET");
+            builder.Services.AddKeyedTransient<
+                IImagePredictionService,
+                ResNetImagePredictionService
+            >("MLNET");
             builder.Services.AddTransient<IPredictionServiceFactory, PredictionServiceFactory>();
 
             var app = builder.Build();
