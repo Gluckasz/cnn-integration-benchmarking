@@ -87,7 +87,6 @@ namespace Integration.ML.NET
                     .First();
 
                 output[i] = topPrediction.Index.ToString();
-                Console.WriteLine(topPrediction.Index.ToString());
             }
 
             return output;
