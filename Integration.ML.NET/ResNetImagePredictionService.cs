@@ -5,7 +5,7 @@ using Microsoft.ML.Transforms.Image;
 namespace Integration.ML.NET
 {
     public class ResNetImagePredictionService(
-        string modelPath,
+        Constants constants,
         ModelInputBuilder<OnnxInputImagePath> builder
     ) : IImagePredictionService
     {
@@ -56,7 +56,7 @@ namespace Integration.ML.NET
                     mlContext.Transforms.ApplyOnnxModel(
                         outputColumnNames: ["logits"],
                         inputColumnNames: ["pixel_values"],
-                        modelFile: modelPath,
+                        modelFile: constants.OnnxModelPath,
                         shapeDictionary: new Dictionary<string, int[]>
                         {
                             { "pixel_values", _inputShape },

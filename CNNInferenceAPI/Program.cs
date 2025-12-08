@@ -1,3 +1,5 @@
+using Integration.Common;
+using Integration.ML.NET;
 using Scalar.AspNetCore;
 
 namespace CNNInferenceAPI
@@ -12,6 +14,14 @@ namespace CNNInferenceAPI
 
             builder.Services.AddOpenApi();
 
+            builder.Services.AddSingleton<Constants>();
+            builder.Services.AddTransient<
+                ModelInputBuilder<OnnxInputImagePath>,
+                OnnxInputBuilder
+            >();
+            builder.Services.AddKeyedTransient<IImagePredictionService, ResNetImagePredictionService>("MLNET");
+            builder.Services.AddTransient<IPredictionServiceFactory, PredictionServiceFactory>();
+
             var app = builder.Build();
 
             if (app.Environment.IsDevelopment())
@@ -22,7 +32,7 @@ namespace CNNInferenceAPI
 
             app.UseAuthorization();
 
-            app.MapGet("/", () => "Hello world!");
+            app.MapRunPredictionsEndpoints();
 
             app.Run();
         }
